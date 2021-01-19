@@ -3,9 +3,10 @@ import RNBluetoothClassicModule, { StandardOptions } from "./BluetoothNativeModu
 import BluetoothDevice from "./BluetoothDevice";
 import { BluetoothEventListener, StateChangeEvent, BluetoothDeviceEvent, BluetoothEventSubscription } from "./BluetoothEvent";
 import { BluetoothDeviceReadEvent } from "./BluetoothEvent";
+export declare type BufferEncoding = "ascii" | "utf8" | "utf-8" | "utf16le" | "ucs2" | "ucs-2" | "base64" | "latin1" | "binary" | "hex";
 /**
  * Provides access to native module.  In general the methods will be direct calls
- * through to {@code NativeModules.RNBluetoothClassc}, although there are instances
+ * through to {@code NativeModules.RNBluetoothClassic}, although there are instances
  * where methods are overwritten where additional information is required.  These
  * methods are related to {@code BluetoothConnection} requests, where the response
  * must be wrapped.
@@ -110,8 +111,9 @@ export default class BluetoothModule {
      *
      * @param address the address to which we will send data
      * @param message String or Buffer which will be sent
+     * @param encoding Buffer character encoding to use
      */
-    writeToDevice(address: string, message: any): Promise<boolean>;
+    writeToDevice(address: string, message: any, encoding?: BufferEncoding): Promise<boolean>;
     /**
      * Starts discovery on the bluetooth adatper.
      *

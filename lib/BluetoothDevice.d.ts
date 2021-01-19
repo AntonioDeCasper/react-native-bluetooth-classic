@@ -1,4 +1,4 @@
-import BluetoothModule from "./BluetoothModule";
+import BluetoothModule, { BufferEncoding } from "./BluetoothModule";
 import BluetoothNativeDevice from "./BluetoothNativeDevice";
 import { BluetoothEventListener, BluetoothDeviceReadEvent, BluetoothEventSubscription } from "./BluetoothEvent";
 import { StandardOptions } from "./BluetoothNativeModule";
@@ -62,12 +62,13 @@ export default class BluetoothDevice implements BluetoothNativeDevice {
     read(): Promise<String>;
     /**
      * Writes the provided data to the device.  This accepts String or Buffer data, if String
-     * it will be converted to a Buffer and then Base64 encoded prior to sending to the
+     * it will be converted to a Buffer and then Base64 encoded by default prior to sending to the
      * Native module.
      *
      * @param data to be written to the device.
+     * @param encoding Buffer character encoding to use.
      */
-    write(data: any): Promise<boolean>;
+    write(data: any, encoding?: BufferEncoding): Promise<boolean>;
     /**
      * Adds a listener to the device.  Once completed this will:
      * - send queued data already read from the device (if implemented by DeviceConnection)

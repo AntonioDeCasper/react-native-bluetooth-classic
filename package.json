@@ -1,6 +1,6 @@
 {
-  "name": "react-native-bluetooth-classic",
-  "version": "1.60.0-rc.6",
+  "name": "rn-telemetry-bluetooth",
+  "version": "0.1.0",
   "description": "Implement bluetooth classic (serial) on Android (Bluetooth Adapter) and IOS (External Accessory)",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -13,7 +13,7 @@
     "preversion": "npm run build",
     "postversion": "git push && git push --tags && npm publish"
   },
-  "repository": "git://github.com/kenjdavidson/react-native-bluetooth-classic.git",
+  "repository": "git://github.com/AntonioDeCasper/react-native-bluetooth-classic/tree/forked",
   "keywords": [
     "react-native",
     "bluetooth-classic",
@@ -22,8 +22,9 @@
     "External Accessory",
     "IOS"
   ],
-  "author": "Kenneth Davidson <ken.j.davidson@live.ca> (https://github.com/kenjdavidson)",
+  "author": "Anton Gribenkov <antoniodecasper@gmail.com> (https://antoniodecasper.github.io)",
   "contributors": [
+    "Kenneth Davidson <ken.j.davidson@live.ca> (https://github.com/kenjdavidson)",
     "Jakub Martyčák <martycakjakub@gmail.com> (https://github.com/rusel1989)",
     "Tony Lara <tony.lara.p@gmail.com> (https://github.com/tonyl)",
     "redloro@gmail.com (https://github.com/redloro)",
@@ -32,10 +33,6 @@
     "Anton Petrov (https://github.com/tpettrov)"
   ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kenjdavidson/react-native-bluetooth-classic/issues"
-  },
-  "homepage": "https://github.com/kenjdavidson/react-native-bluetooth-classic",
   "peerDependencies": {
     "react-native": ">=0.60.0"
   },
